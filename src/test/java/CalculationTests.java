@@ -162,7 +162,7 @@ public class CalculationTests extends BaseTest {
             "30, 640",
 
             "31, 800"})
-    void test(int kilometers, float expected) {
+    void boundaryValuesTest(int kilometers, float expected) {
         float result = calculation.calculateDeliveryCost(
                 kilometers, false, Dimensions.BIG, WorkloadCoefficient.VERY_HIGH);
         Assertions.assertEquals(expected, result);
